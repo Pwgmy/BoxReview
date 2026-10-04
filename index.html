@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxReview - Review de jogos</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>BoxReview</h1>
+
+        <p>
+            Sistema de avaliação de jogos
+        </p>
+
+    </header>
+
+    <nav>
+
+        <ul>
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+                <a href="#cadastro">Cadastrar jogo</a>
+            </li>
+
+            <li>
+                <a href="#jogos">Jogos cadastrados</a>
+            </li>
+
+            <li>
+                <a href="#detalhes">Detalhes</a>
+            </li>
+        </ul>
+
+    </nav>
+    <main>
+
+        <section id="inicio">
+
+            <h2>BoxReview</h2>
+
+            <p>
+                Bem-vindo ao sistema de reviews de jogos.
+                Aqui é possível cadastrar jogos, consultar
+                informações e visualizar avaliações.
+            </p>
+
+        </section>
+
+        <section id="cadastro">
+
+            <h2>Cadastro de jogo</h2>
+
+            <form>
+
+                <div>
+                    <label for="nome">Nome do jogo:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome do jogo"
+                    >
+                </div>
+
+                <div>
+                    <label for="desenvolvedora">
+                        Desenvolvedora:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="desenvolvedora"
+                        name="desenvolvedora"
+                        placeholder="Digite a desenvolvedora"
+                    >
+                </div>
+
+                <div>
+                    <label for="plataforma">
+                        Plataforma:
+                    </label>
+
+                    <select id="plataforma" name="plataforma">
+
+                        <option value="">
+                            Selecione uma plataforma
+                        </option>
+
+                        <option value="pc">
+                            PC
+                        </option>
+
+                        <option value="playstation">
+                            PlayStation
+                        </option>
+
+                        <option value="xbox">
+                            Xbox
+                        </option>
+
+                        <option value="nintendo">
+                            Nintendo Switch
+                        </option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="genero">
+                        Gênero:
+                    </label>
+
+                    <select id="genero" name="genero">
+
+                        <option value="">
+                            Selecione um gênero
+                        </option>
+
+                        <option value="acao">
+                            Ação
+                        </option>
+
+                        <option value="aventura">
+                            Aventura
+                        </option>
+
+                        <option value="rpg">
+                            RPG
+                        </option>
+
+                        <option value="terror">
+                            Terror
+                        </option>
+
+                        <option value="estrategia">
+                            Estratégia
+                        </option>
+
+                        <option value="corrida">
+                            Corrida
+                        </option>
+
+                        <option value="esportes">
+                            Esportes
+                        </option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ano">
+                        Ano de lançamento:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ano"
+                        name="ano"
+                        min="1970"
+                        max="2100"
+                        placeholder="Ex.: 2026"
+                    >
+                </div>
+
+                <div>
+                    <label for="nota">
+                        Nota:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota"
+                        name="nota"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="Ex.: 9.0"
+                    >
+                </div>
+
+                <div>
+                    <label for="status">
+                        Status:
+                    </label>
+
+                    <select id="status" name="status">
+
+                        <option value="">
+                            Selecione o status
+                        </option>
+
+                        <option value="jogando">
+                            Jogando
+                        </option>
+
+                        <option value="finalizado">
+                            Finalizado
+                        </option>
+
+                        <option value="nao-jogado">
+                            Não jogado
+                        </option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="review">
+                        Review:
+                    </label>
+
+                    <textarea
+                        id="review"
+                        name="review"
+                        rows="5"
+                        placeholder="Escreva sua avaliação sobre o jogo"
+                    ></textarea>
+                </div>
+
+                <div>
+
+                    <button type="submit">
+                        Cadastrar jogo
+                    </button>
+
+                    <button type="reset">
+                        Limpar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section id="jogos">
+
+            <h2>Jogos cadastrados</h2>
+
+            <div>
+
+                <label for="pesquisa">
+                    Pesquisar jogo:
+                </label>
+
+                <input
+                    type="search"
+                    id="pesquisa"
+                    name="pesquisa"
+                    placeholder="Digite o nome do jogo"
+                >
+
+                <button type="button">
+                    Pesquisar
+                </button>
+
+            </div>
+
+            <div>
+
+                <label for="filtro-genero">
+                    Filtrar por gênero:
+                </label>
+
+                <select id="filtro-genero">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="acao">
+                        Ação
+                    </option>
+
+                    <option value="aventura">
+                        Aventura
+                    </option>
+
+                    <option value="rpg">
+                        RPG
+                    </option>
+
+                    <option value="terror">
+                        Terror
+                    </option>
+
+                    <option value="estrategia">
+                        Estratégia
+                    </option>
+
+                    <option value="corrida">
+                        Corrida
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div>
+
+                <label for="ordenacao">
+                    Ordenar por:
+                </label>
+
+                <select id="ordenacao">
+
+                    <option value="nome">
+                        Nome
+                    </option>
+
+                    <option value="nota">
+                        Nota
+                    </option>
+
+                    <option value="ano">
+                        Ano de lançamento
+                    </option>
+
+                    <option value="genero">
+                        Gênero
+                    </option>
+
+                </select>
+
+            </div>
+
+            <section>
+
+                <h3>Lista de jogos</h3>
+
+                <article>
+
+                    <img
+                        src="https://placehold.co/300x180"
+                        alt="Capa do jogo Elden Ring"
+                    >
+
+                    <h3>Elden Ring</h3>
+
+                    <p>
+                        Desenvolvedora: FromSoftware
+                    </p>
+
+                    <p>
+                        Gênero: RPG
+                    </p>
+
+                    <p>
+                        Plataforma: PC
+                    </p>
+
+                    <p>
+                        Ano: 2022
+                    </p>
+
+                    <p>
+                        Nota: 9.5/10
+                    </p>
+
+                    <button type="button">
+                        Ver detalhes
+                    </button>
+
+                    <button type="button">
+                        Editar
+                    </button>
+
+                    <button type="button">
+                        Excluir
+                    </button>
+
+
+                <article>
+
+                    <img
+                        src="https://placehold.co/300x180"
+                        alt="Capa do jogo Resident Evil 4"
+                    >
+
+                    <h3>Resident Evil 4</h3>
+
+                    <p>
+                        Desenvolvedora: Capcom
+                    </p>
+
+                    <p>
+                        Gênero: Terror
+                    </p>
+
+                    <p>
+                        Plataforma: PlayStation
+                    </p>
+
+                    <p>
+                        Ano: 2023
+                    </p>
+
+                    <p>
+                        Nota: 9.0/10
+                    </p>
+
+                    <button type="button">
+                        Ver detalhes
+                    </button>
+
+                    <button type="button">
+                        Editar
+                    </button>
+
+                    <button type="button">
+                        Excluir
+                    </button>
+
+                </article>
+
+                <article>
+
+                    <img
+                        src="https://placehold.co/300x180"
+                        alt="Capa do jogo Forza Horizon 5"
+                    >
+
+                    <h3>Forza Horizon 5</h3>
+
+                    <p>
+                        Desenvolvedora: Playground Games
+                    </p>
+
+                    <p>
+                        Gênero: Corrida
+                    </p>
+
+                    <p>
+                        Plataforma: Xbox
+                    </p>
+
+                    <p>
+                        Ano: 2021
+                    </p>
+
+                    <p>
+                        Nota: 8.7/10
+                    </p>
+
+                    <button type="button">
+                        Ver detalhes
+                    </button>
+
+                    <button type="button">
+                        Editar
+                    </button>
+
+                    <button type="button">
+                        Excluir
+                    </button>
+
+                </article>
+
+                <article>
+
+                    <img
+                        src="https://placehold.co/300x180"
+                        alt="Capa do jogo The Legend of Zelda"
+                    >
+
+                    <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+
+                    <p>
+                        Desenvolvedora: Nintendo
+                    </p>
+
+                    <p>
+                        Gênero: Aventura
+                    </p>
+
+                    <p>
+                        Plataforma: Nintendo Switch
+                    </p>
+
+                    <p>
+                        Ano: 2023
+                    </p>
+
+                    <p>
+                        Nota: 9.8/10
+                    </p>
+
+                    <button type="button">
+                        Ver detalhes
+                    </button>
+
+                    <button type="button">
+                        Editar
+                    </button>
+
+                    <button type="button">
+                        Excluir
+                    </button>
+
+                </article>
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+
+        <p>
+            BoxReview
+        </p>
+
+        <p>
+            Sistema desenvolvido para fins acadêmicos.
+        </p>
+
+    </footer>
+</body>
+</html>
