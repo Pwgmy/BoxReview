@@ -1,0 +1,59 @@
+:root {
+    --cor-fundo: #0d0d16;
+    --cor-superficie: #171725;
+    --cor-card: #1e1e30;
+    --cor-borda: #34344b;
+    --cor-roxa: #8b5cf6;
+    --cor-roxa-hover: #a78bfa;
+    --cor-texto: #f3f4f6;
+    --cor-texto-secundario: #b6b6c9;
+    --cor-verde: #34d399;
+    --cor-vermelha: #fb7185;
+    --cor-amarela: #fbbf24;
+    --raio-borda: 12px;
+    --sombra: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--cor-roxa-hover);
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
