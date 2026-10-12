@@ -57,3 +57,54 @@ textarea {
 button {
     cursor: pointer;
 }
+
+header {
+    padding: 24px 6%;
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--cor-roxa-hover);
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+nav {
+    background-color: #12121e;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 0 6%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 16px 0;
+    color: var(--cor-texto-secundario);
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--cor-roxa-hover);
+    border-bottom-color: var(--cor-roxa);
+}
