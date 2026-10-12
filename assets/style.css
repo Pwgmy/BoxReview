@@ -278,3 +278,31 @@ button[type="reset"]:hover {
     flex-wrap: wrap;
     gap: 12px;
 }
+
+#jogos > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin-bottom: 16px;
+    padding: 16px;
+
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+#jogos > div label {
+    flex-shrink: 0;
+}
+
+#jogos > div input,
+#jogos > div select {
+    flex: 1 1 180px;
+}
+
+#jogos > div button {
+    flex-shrink: 0;
+}
+
