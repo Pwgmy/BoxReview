@@ -163,3 +163,118 @@ p {
     max-width: 650px;
     font-size: 1.05rem;
 }
+
+#cadastro form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 28px;
+    box-shadow: var(--sombra);
+}
+
+#cadastro form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+#cadastro form > div:nth-last-child(2),
+#cadastro form > div:last-child {
+    grid-column: 1 / -1;
+}
+
+label {
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+
+    color: var(--cor-texto);
+    background-color: #10101b;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #88889f;
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--cor-roxa-hover);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+button {
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background-color: var(--cor-roxa);
+    color: white;
+
+    font-weight: 700;
+    transition:
+        background-color 0.2s,
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+button:hover {
+    background-color: #7541df;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--cor-roxa-hover);
+    outline-offset: 3px;
+}
+
+button[type="reset"] {
+    background-color: transparent;
+    color: var(--cor-texto);
+    border-color: var(--cor-borda);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--cor-borda);
+}
+
+#cadastro form > div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
