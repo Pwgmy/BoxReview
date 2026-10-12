@@ -108,3 +108,58 @@ nav a:focus-visible {
     color: var(--cor-roxa-hover);
     border-bottom-color: var(--cor-roxa);
 }
+
+main {
+    width: min(1200px, 88%);
+    margin: 0 auto;
+    padding: 32px 0 50px;
+}
+
+section {
+    margin-bottom: 36px;
+}
+
+section > h2 {
+    font-size: 1.65rem;
+    margin-bottom: 20px;
+    padding-left: 14px;
+    border-left: 4px solid var(--cor-roxa);
+}
+
+h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+h4 {
+    margin: 16px 0 8px;
+}
+
+p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 10px;
+}
+
+#inicio {
+    padding: 40px;
+    background: linear-gradient(
+        120deg,
+        rgba(139, 92, 246, 0.2),
+        rgba(23, 23, 37, 0.95)
+    );
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+}
+
+#inicio h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    border: none;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+#inicio p {
+    max-width: 650px;
+    font-size: 1.05rem;
+}
